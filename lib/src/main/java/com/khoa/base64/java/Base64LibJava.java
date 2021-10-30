@@ -7,9 +7,21 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 public class Base64LibJava {
+  /**
+   * Encode func
+   *
+   * @param value as string
+   * @return String
+   */
   public static String encode(String value) {
     return Base64.getEncoder().encodeToString(value.getBytes(StandardCharsets.UTF_8));
   }
+  /**
+   * Decode func
+   *
+   * @param value as string
+   * @return byte array
+   */
   public static byte[] decode(String value) {
     return Base64.getDecoder().decode(value.getBytes(StandardCharsets.UTF_8));
   }
